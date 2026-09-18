@@ -1,0 +1,56 @@
+﻿/* ==========================================================================
+   S&U PROFESSIONAL LUXURY UNISEX SALON — RESPONSIVE.CSS
+   Responsive adjustments for tablet and mobile screens.
+   ========================================================================== */
+
+@media (max-width: 1023px) {
+  .nav-actions .btn-outline { display: none; }
+  .hero-grid,
+  .experience-grid,
+  .story-grid,
+  .collaboration-grid,
+  .contact-grid,
+  .map-wrap,
+  .weather-grid,
+  .value-grid { grid-template-columns: 1fr; }
+  .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 767px) {
+  :root { --header-height: 78px; }
+  .section { padding: 4.4rem 0; }
+  .hero-section, .page-hero { min-height: auto; }
+  .hero-actions,
+  .cta-stack { flex-direction: column; }
+  .hero-actions .btn,
+  .cta-stack .btn { width: 100%; }
+  .service-grid,
+  .gallery-grid,
+  .footer-grid,
+  .mood-grid { grid-template-columns: 1fr; }
+  .value-grid { gap: 1rem; }
+  .media-stack { min-height: 430px; }
+  .stack-one { width: 82%; height: 310px; }
+  .stack-two { width: 56%; height: 210px; }
+  .tour-stage { min-height: 420px; }
+  .secondary { width: 42%; }
+  .hotspot-one { top: 10%; left: 25%; }
+  .hotspot-two { top: 22%; right: 10%; }
+  .hotspot-three { bottom: 14%; left: 18%; }
+  .hotspot-four { bottom: 8%; right: 10%; }
+  .bottom-bar-inner { flex-direction: column; text-align: center; }
+  .floating-whatsapp { width: 52px; height: 52px; }
+}
+
+@media (max-width: 500px) {
+  .brand-logo-image { width: 170px; }
+  .site-header .brand-logo-image { width: 80px; }
+  .hero-brand-mark .brand-logo-image { width: 170px; }
+  .location-chip { letter-spacing: 0.12em; }
+  .tab-btn, .filter-btn { width: 100%; }
+  .tab-buttons, .filter-bar { display: grid; grid-template-columns: 1fr; }
+  .service-meta { flex-direction: column; align-items: flex-start; }
+  .mini-btn { width: 100%; }
+}

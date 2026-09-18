@@ -1,0 +1,46 @@
+﻿/* ==========================================================================
+   S&U PROFESSIONAL LUXURY UNISEX SALON — ANIMATIONS.CSS
+   Subtle motion and reveal effects for a luxurious editorial experience.
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-image-card img,
+.service-thumb img,
+.gallery-item img,
+.mood-image img {
+  transition: transform 0.7s ease;
+}
+.service-card:hover .service-thumb img,
+.gallery-item:hover img,
+.mood-image:hover img,
+.hero-image-card:hover img {
+  transform: scale(1.05);
+}
+
+.floating-whatsapp {
+  animation: pulse 2.8s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
